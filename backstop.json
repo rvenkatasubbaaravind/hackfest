@@ -12,8 +12,7 @@
       "height": 768
     }
   ],
-  "onBeforeScript": "puppet/onBefore.js",
-  "onReadyScript": "puppet/onReady.js",
+  "onBeforeScript": "onBefore.js",
   "scenarios": [
     {
       "label": "BackstopJS Homepage",
@@ -22,7 +21,7 @@
       "referenceUrl": "",
       "readyEvent": "",
       "readySelector": "",
-      "delay": 0,
+      "delay": 100,
       "hideSelectors": [],
       "removeSelectors": [],
       "hoverSelector": "",

@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -19,7 +20,7 @@ type Player struct {
 func main() {
 	port := os.Getenv("PORT")
 	if port == "" {
-		port = "3982" // Default port if not specified
+		port = "3892" // Default port if not specified
 	}
 
 	// Define the file server to serve static files
@@ -39,6 +40,8 @@ func main() {
 func getCricketScores(w http.ResponseWriter, r *http.Request) {
 	// Set CORS headers if needed
 	w.Header().Set("Content-Type", "application/json")
+
+	fmt.Println("got request")
 
 	// Sample data - in a real application, this would come from a database or external API
 	players := []Player{
