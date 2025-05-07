@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Web Server</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Welcome to the Cricbuzz</h1>
+  
+    
+    <div class="cricket-scores">
+        <h2>Cricket Match Scorecard</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Player Name</th>
+                    <th>Balls Faced</th>
+                    <th>Runs</th>
+                    <th>Sixes</th>
+                    <th>Fours</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="players-data">
+                <tr>
+                    <td colspan="6" class="loading">Loading scores...</td>
+                </tr>
+            </tbody>
+        </table>
+        <button id="refresh-scores" class="refresh-btn">Refresh Scores</button>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>

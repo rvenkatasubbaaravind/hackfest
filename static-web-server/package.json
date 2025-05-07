@@ -1,0 +1,14 @@
+{
+  "name": "static-web-server",
+  "version": "1.0.0",
+  "description": "A simple static web server to serve HTML, CSS, and JavaScript files.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "author": "",
+  "license": "ISC"
+}
