@@ -4,5 +4,8 @@
   },
   "dependencies": {
     "dotenv": "^16.5.0"
+  },
+  "scripts": {
+    "postinstall": "node scripts/replace-text.js"
   }
 }
