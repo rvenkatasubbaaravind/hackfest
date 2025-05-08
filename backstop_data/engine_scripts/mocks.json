@@ -69,7 +69,7 @@
                     {
                         "PortunusAggThreat_ch.requests": "106",
                         "PortunusAggThreat_ch.severity": "High",
-                        "PortunusAggThreat_ch.tclass": "APT"
+                        "PortunusAggThreat_ch.tclass": "Malicious"
                     },
                     {
                         "PortunusAggThreat_ch.requests": "33",
@@ -188,7 +188,7 @@
                 "data": [
                     {
                         "PortunusAggThreat_ch.requests": "106",
-                        "PortunusAggThreat_ch.tclass": "APT"
+                        "PortunusAggThreat_ch.tclass": "Malicious"
                     }
                 ],
                 "dataSource": "SECURITY_CLICKHOUSE",
@@ -219,7 +219,7 @@
                             "member": "PortunusAggThreat_ch.tclass",
                             "operator": "equals",
                             "values": [
-                                "APT"
+                                "Malicious"
                             ]
                         }
                     ],
@@ -314,7 +314,7 @@
                     "member": "PortunusAggThreat_ch.tclass",
                     "operator": "equals",
                     "values": [
-                        "APT"
+                        "Malicious"
                     ]
                 }
             ],
@@ -339,7 +339,8 @@
         },
         "slowQuery": false,
         "total": null
-    },
+    }
+},
     "case4":{
         "result": {
             "annotation": {
@@ -408,7 +409,7 @@
                         "member": "PortunusAggThreat_ch.tclass",
                         "operator": "equals",
                         "values": [
-                            "APT"
+                            "Malicious"
                         ]
                     }
                 ],
@@ -532,7 +533,7 @@
                             "member": "PortunusAggThreat_ch.tclass",
                             "operator": "equals",
                             "values": [
-                                "APT"
+                                "Malicious"
                             ]
                         }
                     ],
@@ -569,8 +570,7 @@
                 "slowQuery": false,
                 "total": 1
             }
-        }
-    },
+        },
     "case6":{
         "result": {
             "annotation": {
