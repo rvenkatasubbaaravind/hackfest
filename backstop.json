@@ -2,36 +2,49 @@
   "id": "backstop_default",
   "viewports": [
     {
-      "label": "phone",
-      "width": 320,
-      "height": 480
-    },
-    {
-      "label": "tablet",
-      "width": 1024,
-      "height": 768
+      "label": "desktop",
+      "width": 1920,
+      "height": 1080
     }
   ],
-  "onBeforeScript": "puppet/onBefore.js",
-  "onReadyScript": "puppet/onReady.js",
+  "onBeforeScript": "login.js",
   "scenarios": [
     {
-      "label": "BackstopJS Homepage",
+      "label": "Main Application Page",
       "cookiePath": "backstop_data/engine_scripts/cookies.json",
-      "url": "https://garris.github.io/BackstopJS/",
+      "url": "https://env-2a.test.infoblox.com",
       "referenceUrl": "",
       "readyEvent": "",
-      "readySelector": "",
-      "delay": 0,
+      "onReadyScript": "waitForAPIs.js",
+      "readySelector": "ib-dashboard-widget",
       "hideSelectors": [],
       "removeSelectors": [],
       "hoverSelector": "",
       "clickSelector": "",
       "postInteractionWait": 0,
-      "selectors": [],
+      "selectors": ["document"],
       "selectorExpansion": true,
       "expect": 0,
-      "misMatchThreshold" : 0.1,
+      "misMatchThreshold": 0.1,
+      "requireSameDimensions": true
+    },
+     {
+      "label": "Security Workspace",
+      "cookiePath": "backstop_data/engine_scripts/cookies.json",
+      "url": "https://env-2a.test.infoblox.com/#/workspace/security",
+      "referenceUrl": "",
+      "readyEvent": "",
+      "onReadyScript": "waitForAPIs.js",
+      "readySelector": "ib-dashboard-widget",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": "",
+      "postInteractionWait": 0,
+      "selectors": ["document"],
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold": 0.1,
       "requireSameDimensions": true
     }
   ],
@@ -45,7 +58,8 @@
   "report": ["browser"],
   "engine": "puppeteer",
   "engineOptions": {
-    "args": ["--no-sandbox"]
+    "args": ["--no-sandbox"],
+    "headless": false
   },
   "asyncCaptureLimit": 5,
   "asyncCompareLimit": 50,
