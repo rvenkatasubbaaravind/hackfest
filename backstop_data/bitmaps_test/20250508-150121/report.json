@@ -1,10 +1,10 @@
-report({
+{
   "testSuite": "BackstopJS",
   "tests": [
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_Main_Application_Page_0_document_0_desktop.png",
-        "test": "../bitmaps_test/20250508-150213/backstop_default_Main_Application_Page_0_document_0_desktop.png",
+        "test": "../bitmaps_test/20250508-150121/backstop_default_Main_Application_Page_0_document_0_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_Main_Application_Page_0_document_0_desktop.png",
         "label": "Main Application Page",
@@ -27,4 +27,4 @@ report({
     }
   ],
   "id": "backstop_default"
-});
+}
