@@ -1,0 +1,33 @@
+{
+  "testSuite": "BackstopJS",
+  "tests": [
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/backstop_default_Main_Application_Page_0_document_0_desktop.png",
+        "test": "../bitmaps_test/20250508-112618/backstop_default_Main_Application_Page_0_document_0_desktop.png",
+        "selector": "document",
+        "fileName": "backstop_default_Main_Application_Page_0_document_0_desktop.png",
+        "label": "Main Application Page",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "https://env-2a.test.infoblox.com",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 0.44020061728395066,
+          "misMatchPercentage": "0.44",
+          "analysisTime": 28
+        },
+        "diffImage": "../bitmaps_test/20250508-112618/failed_diff_backstop_default_Main_Application_Page_0_document_0_desktop.png"
+      },
+      "status": "fail"
+    }
+  ],
+  "id": "backstop_default"
+}

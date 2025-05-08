@@ -1,7 +1,10 @@
 require('dotenv').config();
+const mockFunctions = require('./mock.js');
 
 module.exports = async (page, scenario) => {
   console.log('Logging in to the application...');
+
+  await mockFunctions(page, scenario);
 
   // Navigate to the login page
   await page.goto('https://env-2a.test.infoblox.com', { waitUntil: 'networkidle2' });

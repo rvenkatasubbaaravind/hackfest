@@ -1,0 +1,1406 @@
+{
+    "case1":
+        {
+            "result": {
+                "annotation": {
+                    "dimensions": {
+                        "PortunusAggThreat_ch.severity": {
+                            "shortTitle": "Severity",
+                            "title": "Portunus Agg Threat Ch Severity",
+                            "type": "string"
+                        },
+                        "PortunusAggThreat_ch.tclass": {
+                            "shortTitle": "Tclass",
+                            "title": "Portunus Agg Threat Ch Tclass",
+                            "type": "string"
+                        }
+                    },
+                    "measures": {
+                        "PortunusAggThreat_ch.requests": {
+                            "drillMembers": [],
+                            "drillMembersGrouped": {
+                                "dimensions": [],
+                                "measures": []
+                            },
+                            "shortTitle": "Requests",
+                            "title": "Portunus Agg Threat Ch Requests",
+                            "type": "number"
+                        }
+                    },
+                    "segments": {
+                        "PortunusAggThreat_ch.threat_classes": {
+                            "shortTitle": "Threat Classes",
+                            "title": "Portunus Agg Threat Ch Threat Classes"
+                        }
+                    },
+                    "timeDimensions": {}
+                },
+                "data": [
+                    {
+                        "PortunusAggThreat_ch.requests": "704",
+                        "PortunusAggThreat_ch.severity": "High",
+                        "PortunusAggThreat_ch.tclass": "Malicious"
+                    },
+                    {
+                        "PortunusAggThreat_ch.requests": "464",
+                        "PortunusAggThreat_ch.severity": "Low",
+                        "PortunusAggThreat_ch.tclass": "Notional Data Exfiltration"
+                    },
+                    {
+                        "PortunusAggThreat_ch.requests": "419",
+                        "PortunusAggThreat_ch.severity": "High",
+                        "PortunusAggThreat_ch.tclass": "Phishing"
+                    },
+                    {
+                        "PortunusAggThreat_ch.requests": "373",
+                        "PortunusAggThreat_ch.severity": "High",
+                        "PortunusAggThreat_ch.tclass": "MalwareDownload"
+                    },
+                    {
+                        "PortunusAggThreat_ch.requests": "258",
+                        "PortunusAggThreat_ch.severity": "Medium",
+                        "PortunusAggThreat_ch.tclass": "Suspicious"
+                    },
+                    {
+                        "PortunusAggThreat_ch.requests": "166",
+                        "PortunusAggThreat_ch.severity": "High",
+                        "PortunusAggThreat_ch.tclass": "MalwareC2"
+                    },
+                    {
+                        "PortunusAggThreat_ch.requests": "106",
+                        "PortunusAggThreat_ch.severity": "High",
+                        "PortunusAggThreat_ch.tclass": "APT"
+                    },
+                    {
+                        "PortunusAggThreat_ch.requests": "33",
+                        "PortunusAggThreat_ch.severity": "Medium",
+                        "PortunusAggThreat_ch.tclass": "Sinkhole"
+                    },
+                    {
+                        "PortunusAggThreat_ch.requests": "25",
+                        "PortunusAggThreat_ch.severity": "High",
+                        "PortunusAggThreat_ch.tclass": "DNSTunnel"
+                    },
+                    {
+                        "PortunusAggThreat_ch.requests": "13",
+                        "PortunusAggThreat_ch.severity": "High",
+                        "PortunusAggThreat_ch.tclass": "MalwareC2DGA"
+                    },
+                    {
+                        "PortunusAggThreat_ch.requests": "8",
+                        "PortunusAggThreat_ch.severity": "High",
+                        "PortunusAggThreat_ch.tclass": "Scam"
+                    },
+                    {
+                        "PortunusAggThreat_ch.requests": "6",
+                        "PortunusAggThreat_ch.severity": "Medium",
+                        "PortunusAggThreat_ch.tclass": "MalwareC2DGA"
+                    },
+                    {
+                        "PortunusAggThreat_ch.requests": "3",
+                        "PortunusAggThreat_ch.severity": "High",
+                        "PortunusAggThreat_ch.tclass": "Suspicious"
+                    },
+                    {
+                        "PortunusAggThreat_ch.requests": "2",
+                        "PortunusAggThreat_ch.severity": "High",
+                        "PortunusAggThreat_ch.tclass": "MaliciousNameserver"
+                    },
+                    {
+                        "PortunusAggThreat_ch.requests": "1",
+                        "PortunusAggThreat_ch.severity": "High",
+                        "PortunusAggThreat_ch.tclass": "Sinkhole"
+                    }
+                ],
+                "dataSource": "SECURITY_CLICKHOUSE",
+                "dbType": "clickhouse",
+                "extDbType": "cubestore",
+                "external": false,
+                "lastRefreshTime": "2025-05-08T09:10:21.166Z",
+                "query": {
+                    "dimensions": [
+                        "PortunusAggThreat_ch.severity",
+                        "PortunusAggThreat_ch.tclass"
+                    ],
+                    "filters": [
+                        {
+                            "member": "PortunusAggThreat_ch.severity",
+                            "operator": "notEquals",
+                            "values": [
+                                "Info"
+                            ]
+                        }
+                    ],
+                    "limit": 10000,
+                    "measures": [
+                        "PortunusAggThreat_ch.requests"
+                    ],
+                    "rowLimit": 10000,
+                    "segments": [
+                        "PortunusAggThreat_ch.threat_classes"
+                    ],
+                    "timeDimensions": [
+                        {
+                            "dateRange": [
+                                "2025-05-01T09:10:19.035",
+                                "2025-05-08T09:10:19.035"
+                            ],
+                            "dimension": "PortunusAggThreat_ch.timestamp"
+                        }
+                    ],
+                    "timezone": "UTC"
+                },
+                "slowQuery": false,
+                "total": null
+            }
+        
+  },
+    "case2":{
+            "result": {
+                "annotation": {
+                    "dimensions": {
+                        "PortunusAggThreat_ch.tclass": {
+                            "shortTitle": "Tclass",
+                            "title": "Portunus Agg Threat Ch Tclass",
+                            "type": "string"
+                        }
+                    },
+                    "measures": {
+                        "PortunusAggThreat_ch.requests": {
+                            "drillMembers": [],
+                            "drillMembersGrouped": {
+                                "dimensions": [],
+                                "measures": []
+                            },
+                            "shortTitle": "Requests",
+                            "title": "Portunus Agg Threat Ch Requests",
+                            "type": "number"
+                        }
+                    },
+                    "segments": {
+                        "PortunusAggThreat_ch.threat_classes": {
+                            "shortTitle": "Threat Classes",
+                            "title": "Portunus Agg Threat Ch Threat Classes"
+                        }
+                    },
+                    "timeDimensions": {}
+                },
+                "data": [
+                    {
+                        "PortunusAggThreat_ch.requests": "106",
+                        "PortunusAggThreat_ch.tclass": "APT"
+                    }
+                ],
+                "dataSource": "SECURITY_CLICKHOUSE",
+                "dbType": "clickhouse",
+                "extDbType": "cubestore",
+                "external": false,
+                "lastRefreshTime": "2025-05-08T08:28:47.838Z",
+                "query": {
+                    "dimensions": [
+                        "PortunusAggThreat_ch.tclass"
+                    ],
+                    "filters": [
+                        {
+                            "member": "PortunusAggThreat_ch.severity",
+                            "operator": "notEquals",
+                            "values": [
+                                "Info"
+                            ]
+                        },
+                        {
+                            "member": "PortunusAggThreat_ch.severity",
+                            "operator": "equals",
+                            "values": [
+                                "High"
+                            ]
+                        },
+                        {
+                            "member": "PortunusAggThreat_ch.tclass",
+                            "operator": "equals",
+                            "values": [
+                                "APT"
+                            ]
+                        }
+                    ],
+                    "limit": 10000,
+                    "measures": [
+                        "PortunusAggThreat_ch.requests"
+                    ],
+                    "rowLimit": 10000,
+                    "segments": [
+                        "PortunusAggThreat_ch.threat_classes"
+                    ],
+                    "timeDimensions": [
+                        {
+                            "dateRange": [
+                                "2025-05-01T08:28:46.445",
+                                "2025-05-08T08:28:46.445"
+                            ],
+                            "dimension": "PortunusAggThreat_ch.timestamp"
+                        }
+                    ],
+                    "timezone": "UTC"
+                },
+                "slowQuery": false,
+                "total": null
+            }
+        },
+    "case3":{
+        "result": {
+        "annotation": {
+            "dimensions": {
+                "PortunusAggThreat_ch.action": {
+                    "shortTitle": "Action",
+                    "title": "Portunus Agg Threat Ch Action",
+                    "type": "string"
+                }
+            },
+            "measures": {
+                "PortunusAggThreat_ch.requests": {
+                    "drillMembers": [],
+                    "drillMembersGrouped": {
+                        "dimensions": [],
+                        "measures": []
+                    },
+                    "shortTitle": "Requests",
+                    "title": "Portunus Agg Threat Ch Requests",
+                    "type": "number"
+                }
+            },
+            "segments": {
+                "PortunusAggThreat_ch.threat_classes": {
+                    "shortTitle": "Threat Classes",
+                    "title": "Portunus Agg Threat Ch Threat Classes"
+                }
+            },
+            "timeDimensions": {}
+        },
+        "data": [
+            {
+                "PortunusAggThreat_ch.action": "Block",
+                "PortunusAggThreat_ch.requests": "101"
+            },
+            {
+                "PortunusAggThreat_ch.action": "Allow",
+                "PortunusAggThreat_ch.requests": "5"
+            }
+        ],
+        "dataSource": "SECURITY_CLICKHOUSE",
+        "dbType": "clickhouse",
+        "extDbType": "cubestore",
+        "external": false,
+        "lastRefreshTime": "2025-05-08T08:28:49.683Z",
+        "query": {
+            "dimensions": [
+                "PortunusAggThreat_ch.action"
+            ],
+            "filters": [
+                {
+                    "member": "PortunusAggThreat_ch.severity",
+                    "operator": "notEquals",
+                    "values": [
+                        "Info"
+                    ]
+                },
+                {
+                    "member": "PortunusAggThreat_ch.severity",
+                    "operator": "equals",
+                    "values": [
+                        "High"
+                    ]
+                },
+                {
+                    "member": "PortunusAggThreat_ch.tclass",
+                    "operator": "equals",
+                    "values": [
+                        "APT"
+                    ]
+                }
+            ],
+            "limit": 10000,
+            "measures": [
+                "PortunusAggThreat_ch.requests"
+            ],
+            "rowLimit": 10000,
+            "segments": [
+                "PortunusAggThreat_ch.threat_classes"
+            ],
+            "timeDimensions": [
+                {
+                    "dateRange": [
+                        "2025-05-01T08:28:46.446",
+                        "2025-05-08T08:28:46.446"
+                    ],
+                    "dimension": "PortunusAggThreat_ch.timestamp"
+                }
+            ],
+            "timezone": "UTC"
+        },
+        "slowQuery": false,
+        "total": null
+    },
+    "case4":{
+        "result": {
+            "annotation": {
+                "dimensions": {
+                    "PortunusAggThreat_ch.feed_name": {
+                        "shortTitle": "Feed Name",
+                        "title": "Portunus Agg Threat Ch Feed Name",
+                        "type": "string"
+                    }
+                },
+                "measures": {
+                    "PortunusAggThreat_ch.requests": {
+                        "drillMembers": [],
+                        "drillMembersGrouped": {
+                            "dimensions": [],
+                            "measures": []
+                        },
+                        "shortTitle": "Requests",
+                        "title": "Portunus Agg Threat Ch Requests",
+                        "type": "number"
+                    }
+                },
+                "segments": {
+                    "PortunusAggThreat_ch.threat_classes": {
+                        "shortTitle": "Threat Classes",
+                        "title": "Portunus Agg Threat Ch Threat Classes"
+                    }
+                },
+                "timeDimensions": {}
+            },
+            "data": [
+                {
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.requests": "101"
+                },
+                {
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base_IP",
+                    "PortunusAggThreat_ch.requests": "5"
+                }
+            ],
+            "dataSource": "SECURITY_CLICKHOUSE",
+            "dbType": "clickhouse",
+            "extDbType": "cubestore",
+            "external": false,
+            "lastRefreshTime": "2025-05-08T08:28:47.805Z",
+            "query": {
+                "dimensions": [
+                    "PortunusAggThreat_ch.feed_name"
+                ],
+                "filters": [
+                    {
+                        "member": "PortunusAggThreat_ch.severity",
+                        "operator": "notEquals",
+                        "values": [
+                            "Info"
+                        ]
+                    },
+                    {
+                        "member": "PortunusAggThreat_ch.severity",
+                        "operator": "equals",
+                        "values": [
+                            "High"
+                        ]
+                    },
+                    {
+                        "member": "PortunusAggThreat_ch.tclass",
+                        "operator": "equals",
+                        "values": [
+                            "APT"
+                        ]
+                    }
+                ],
+                "limit": 10000,
+                "measures": [
+                    "PortunusAggThreat_ch.requests"
+                ],
+                "rowLimit": 10000,
+                "segments": [
+                    "PortunusAggThreat_ch.threat_classes"
+                ],
+                "timeDimensions": [
+                    {
+                        "dateRange": [
+                            "2025-05-01T08:28:46.446",
+                            "2025-05-08T08:28:46.446"
+                        ],
+                        "dimension": "PortunusAggThreat_ch.timestamp"
+                    }
+                ],
+                "timezone": "UTC"
+            },
+            "slowQuery": false,
+            "total": null
+        }
+    },
+    "case5":{
+            "result": {
+                "annotation": {
+                    "dimensions": {
+                        "PortunusAggThreat_ch.severity": {
+                            "shortTitle": "Severity",
+                            "title": "Portunus Agg Threat Ch Severity",
+                            "type": "string"
+                        }
+                    },
+                    "measures": {
+                        "PortunusAggThreat_ch.requests": {
+                            "drillMembers": [],
+                            "drillMembersGrouped": {
+                                "dimensions": [],
+                                "measures": []
+                            },
+                            "shortTitle": "Requests",
+                            "title": "Portunus Agg Threat Ch Requests",
+                            "type": "number"
+                        },
+                        "PortunusAggThreat_ch.threatCount": {
+                            "drillMembers": [],
+                            "drillMembersGrouped": {
+                                "dimensions": [],
+                                "measures": []
+                            },
+                            "shortTitle": "Threat Count",
+                            "title": "Portunus Agg Threat Ch Threat Count",
+                            "type": "number"
+                        },
+                        "PortunusAggThreat_ch.timestampMax": {
+                            "drillMembers": [],
+                            "drillMembersGrouped": {
+                                "dimensions": [],
+                                "measures": []
+                            },
+                            "shortTitle": "Timestamp Max",
+                            "title": "Portunus Agg Threat Ch Timestamp Max",
+                            "type": "time"
+                        },
+                        "PortunusAggThreat_ch.totalAssetCount": {
+                            "drillMembers": [],
+                            "drillMembersGrouped": {
+                                "dimensions": [],
+                                "measures": []
+                            },
+                            "shortTitle": "Total Asset Count",
+                            "title": "Portunus Agg Threat Ch Total Asset Count",
+                            "type": "number"
+                        }
+                    },
+                    "segments": {
+                        "PortunusAggThreat_ch.threat_classes": {
+                            "shortTitle": "Threat Classes",
+                            "title": "Portunus Agg Threat Ch Threat Classes"
+                        }
+                    },
+                    "timeDimensions": {}
+                },
+                "data": [
+                    {
+                        "PortunusAggThreat_ch.requests": "106",
+                        "PortunusAggThreat_ch.severity": "High",
+                        "PortunusAggThreat_ch.threatCount": "12",
+                        "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:02.000",
+                        "PortunusAggThreat_ch.totalAssetCount": "29"
+                    }
+                ],
+                "dataSource": "SECURITY_CLICKHOUSE",
+                "dbType": "clickhouse",
+                "extDbType": "cubestore",
+                "external": false,
+                "lastRefreshTime": "2025-05-08T08:28:48.949Z",
+                "query": {
+                    "dimensions": [
+                        "PortunusAggThreat_ch.severity"
+                    ],
+                    "filters": [
+                        {
+                            "member": "PortunusAggThreat_ch.severity",
+                            "operator": "notEquals",
+                            "values": [
+                                "Info"
+                            ]
+                        },
+                        {
+                            "member": "PortunusAggThreat_ch.severity",
+                            "operator": "equals",
+                            "values": [
+                                "High"
+                            ]
+                        },
+                        {
+                            "member": "PortunusAggThreat_ch.tclass",
+                            "operator": "equals",
+                            "values": [
+                                "APT"
+                            ]
+                        }
+                    ],
+                    "limit": 39,
+                    "measures": [
+                        "PortunusAggThreat_ch.requests",
+                        "PortunusAggThreat_ch.timestampMax",
+                        "PortunusAggThreat_ch.totalAssetCount",
+                        "PortunusAggThreat_ch.threatCount"
+                    ],
+                    "offset": 0,
+                    "order": [
+                        {
+                            "desc": true,
+                            "id": "PortunusAggThreat_ch.timestampMax"
+                        }
+                    ],
+                    "rowLimit": 39,
+                    "segments": [
+                        "PortunusAggThreat_ch.threat_classes"
+                    ],
+                    "timeDimensions": [
+                        {
+                            "dateRange": [
+                                "2025-05-01T08:28:46.543",
+                                "2025-05-08T08:28:46.543"
+                            ],
+                            "dimension": "PortunusAggThreat_ch.timestamp"
+                        }
+                    ],
+                    "timezone": "UTC",
+                    "total": true
+                },
+                "slowQuery": false,
+                "total": 1
+            }
+        }
+    },
+    "case6":{
+        "result": {
+            "annotation": {
+                "dimensions": {
+                    "PortunusAggThreat_ch.action": {
+                        "shortTitle": "Action",
+                        "title": "Portunus Agg Threat Ch Action",
+                        "type": "string"
+                    },
+                    "PortunusAggThreat_ch.actor_name": {
+                        "shortTitle": "Actor Name",
+                        "title": "Portunus Agg Threat Ch Actor Name",
+                        "type": "string"
+                    },
+                    "PortunusAggThreat_ch.confidence": {
+                        "shortTitle": "Confidence",
+                        "title": "Portunus Agg Threat Ch Confidence",
+                        "type": "string"
+                    },
+                    "PortunusAggThreat_ch.feed_name": {
+                        "shortTitle": "Feed Name",
+                        "title": "Portunus Agg Threat Ch Feed Name",
+                        "type": "string"
+                    },
+                    "PortunusAggThreat_ch.severity": {
+                        "shortTitle": "Severity",
+                        "title": "Portunus Agg Threat Ch Severity",
+                        "type": "string"
+                    },
+                    "PortunusAggThreat_ch.tclass": {
+                        "shortTitle": "Tclass",
+                        "title": "Portunus Agg Threat Ch Tclass",
+                        "type": "string"
+                    },
+                    "PortunusAggThreat_ch.threat_indicator": {
+                        "shortTitle": "Threat Indicator",
+                        "title": "Portunus Agg Threat Ch Threat Indicator",
+                        "type": "string"
+                    },
+                    "PortunusAggThreat_ch.tproperty": {
+                        "shortTitle": "Tproperty",
+                        "title": "Portunus Agg Threat Ch Tproperty",
+                        "type": "string"
+                    }
+                },
+                "measures": {
+                    "PortunusAggThreat_ch.knownAssetCount": {
+                        "drillMembers": [],
+                        "drillMembersGrouped": {
+                            "dimensions": [],
+                            "measures": []
+                        },
+                        "shortTitle": "Known Asset Count",
+                        "title": "Portunus Agg Threat Ch Known Asset Count",
+                        "type": "number"
+                    },
+                    "PortunusAggThreat_ch.requests": {
+                        "drillMembers": [],
+                        "drillMembersGrouped": {
+                            "dimensions": [],
+                            "measures": []
+                        },
+                        "shortTitle": "Requests",
+                        "title": "Portunus Agg Threat Ch Requests",
+                        "type": "number"
+                    },
+                    "PortunusAggThreat_ch.timestampMax": {
+                        "drillMembers": [],
+                        "drillMembersGrouped": {
+                            "dimensions": [],
+                            "measures": []
+                        },
+                        "shortTitle": "Timestamp Max",
+                        "title": "Portunus Agg Threat Ch Timestamp Max",
+                        "type": "time"
+                    },
+                    "PortunusAggThreat_ch.timestampMin": {
+                        "drillMembers": [],
+                        "drillMembersGrouped": {
+                            "dimensions": [],
+                            "measures": []
+                        },
+                        "shortTitle": "Timestamp Min",
+                        "title": "Portunus Agg Threat Ch Timestamp Min",
+                        "type": "time"
+                    },
+                    "PortunusAggThreat_ch.totalAssetCount": {
+                        "drillMembers": [],
+                        "drillMembersGrouped": {
+                            "dimensions": [],
+                            "measures": []
+                        },
+                        "shortTitle": "Total Asset Count",
+                        "title": "Portunus Agg Threat Ch Total Asset Count",
+                        "type": "number"
+                    },
+                    "PortunusAggThreat_ch.unknownAssetCount": {
+                        "drillMembers": [],
+                        "drillMembersGrouped": {
+                            "dimensions": [],
+                            "measures": []
+                        },
+                        "shortTitle": "Unknown Asset Count",
+                        "title": "Portunus Agg Threat Ch Unknown Asset Count",
+                        "type": "number"
+                    }
+                },
+                "segments": {
+                    "PortunusAggThreat_ch.threat_classes": {
+                        "shortTitle": "Threat Classes",
+                        "title": "Portunus Agg Threat Ch Threat Classes"
+                    }
+                },
+                "timeDimensions": {}
+            },
+            "data": [
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "2",
+                    "PortunusAggThreat_ch.requests": "2",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "xvwftuoknm.xyz",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:19.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:08.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "2",
+                    "PortunusAggThreat_ch.tproperty": "TDS",
+                    "PortunusAggThreat_ch.unknownAssetCount": "0"
+                },
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "1",
+                    "PortunusAggThreat_ch.requests": "1",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "wnt-some-push.net",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:18.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:18.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "1",
+                    "PortunusAggThreat_ch.tproperty": "TDS",
+                    "PortunusAggThreat_ch.unknownAssetCount": "0"
+                },
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "Omnatuor",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "1",
+                    "PortunusAggThreat_ch.requests": "1",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "upskittyan.com",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:18.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:18.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "1",
+                    "PortunusAggThreat_ch.tproperty": "TDS",
+                    "PortunusAggThreat_ch.unknownAssetCount": "0"
+                },
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "0",
+                    "PortunusAggThreat_ch.requests": "1",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "usheebainaut.com",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:18.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:18.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "1",
+                    "PortunusAggThreat_ch.tproperty": "TDS",
+                    "PortunusAggThreat_ch.unknownAssetCount": "1"
+                },
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "1",
+                    "PortunusAggThreat_ch.requests": "1",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "stelronsi.net",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:17.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:17.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "1",
+                    "PortunusAggThreat_ch.tproperty": "TDS",
+                    "PortunusAggThreat_ch.unknownAssetCount": "0"
+                },
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "1",
+                    "PortunusAggThreat_ch.requests": "1",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "so-gr3at3.com",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:17.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:17.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "1",
+                    "PortunusAggThreat_ch.tproperty": "TDS",
+                    "PortunusAggThreat_ch.unknownAssetCount": "0"
+                },
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "1",
+                    "PortunusAggThreat_ch.requests": "1",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "pretty-fly4.com",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:17.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:17.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "1",
+                    "PortunusAggThreat_ch.tproperty": "TDS",
+                    "PortunusAggThreat_ch.unknownAssetCount": "0"
+                },
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "1",
+                    "PortunusAggThreat_ch.requests": "1",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "pretty-fly4.net",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:17.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:17.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "1",
+                    "PortunusAggThreat_ch.tproperty": "TDS",
+                    "PortunusAggThreat_ch.unknownAssetCount": "0"
+                },
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "0",
+                    "PortunusAggThreat_ch.requests": "1",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "spuppers.net",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:17.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:17.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "1",
+                    "PortunusAggThreat_ch.tproperty": "TDS",
+                    "PortunusAggThreat_ch.unknownAssetCount": "1"
+                },
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "1",
+                    "PortunusAggThreat_ch.requests": "1",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "theetheks.com",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:17.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:17.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "1",
+                    "PortunusAggThreat_ch.tproperty": "TDS",
+                    "PortunusAggThreat_ch.unknownAssetCount": "0"
+                },
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "0",
+                    "PortunusAggThreat_ch.requests": "1",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "theeptoah.com",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:17.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:17.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "1",
+                    "PortunusAggThreat_ch.tproperty": "TDS",
+                    "PortunusAggThreat_ch.unknownAssetCount": "1"
+                },
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "1",
+                    "PortunusAggThreat_ch.requests": "1",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "stiftais.top",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:17.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:17.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "1",
+                    "PortunusAggThreat_ch.tproperty": "TDS",
+                    "PortunusAggThreat_ch.unknownAssetCount": "0"
+                },
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "1",
+                    "PortunusAggThreat_ch.requests": "1",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "tauvineebisigi.net",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:17.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:17.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "1",
+                    "PortunusAggThreat_ch.tproperty": "TDS",
+                    "PortunusAggThreat_ch.unknownAssetCount": "0"
+                },
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "Omnatuor",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "0",
+                    "PortunusAggThreat_ch.requests": "1",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "rughaups.net",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:16.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:16.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "1",
+                    "PortunusAggThreat_ch.tproperty": "TDS",
+                    "PortunusAggThreat_ch.unknownAssetCount": "1"
+                },
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "0",
+                    "PortunusAggThreat_ch.requests": "1",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "seepsoaceva.net",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:16.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:16.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "1",
+                    "PortunusAggThreat_ch.tproperty": "TDS",
+                    "PortunusAggThreat_ch.unknownAssetCount": "1"
+                },
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "1",
+                    "PortunusAggThreat_ch.requests": "1",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "push-sdk.com",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:16.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:16.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "1",
+                    "PortunusAggThreat_ch.tproperty": "TDS",
+                    "PortunusAggThreat_ch.unknownAssetCount": "0"
+                },
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "1",
+                    "PortunusAggThreat_ch.requests": "1",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "partners-show.com",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:16.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:16.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "1",
+                    "PortunusAggThreat_ch.tproperty": "TDS",
+                    "PortunusAggThreat_ch.unknownAssetCount": "0"
+                },
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "1",
+                    "PortunusAggThreat_ch.requests": "1",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "rauvoaty.net",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:16.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:16.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "1",
+                    "PortunusAggThreat_ch.tproperty": "TDS",
+                    "PortunusAggThreat_ch.unknownAssetCount": "0"
+                },
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "0",
+                    "PortunusAggThreat_ch.requests": "1",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "osamahit.com",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:15.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:15.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "1",
+                    "PortunusAggThreat_ch.tproperty": "Generic",
+                    "PortunusAggThreat_ch.unknownAssetCount": "1"
+                },
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "0",
+                    "PortunusAggThreat_ch.requests": "1",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "wuporg.com",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:15.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:15.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "1",
+                    "PortunusAggThreat_ch.tproperty": "TDS",
+                    "PortunusAggThreat_ch.unknownAssetCount": "1"
+                },
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "0",
+                    "PortunusAggThreat_ch.requests": "1",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "osamagenius.com",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:15.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:15.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "1",
+                    "PortunusAggThreat_ch.tproperty": "Generic",
+                    "PortunusAggThreat_ch.unknownAssetCount": "1"
+                },
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "1",
+                    "PortunusAggThreat_ch.requests": "1",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "phacmeptaus.net",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:15.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:15.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "1",
+                    "PortunusAggThreat_ch.tproperty": "TDS",
+                    "PortunusAggThreat_ch.unknownAssetCount": "0"
+                },
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "Omnatuor",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "0",
+                    "PortunusAggThreat_ch.requests": "1",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "ptugnins.net",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:15.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:15.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "1",
+                    "PortunusAggThreat_ch.tproperty": "TDS",
+                    "PortunusAggThreat_ch.unknownAssetCount": "1"
+                },
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "1",
+                    "PortunusAggThreat_ch.requests": "1",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "phoompiltu.com",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:15.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:15.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "1",
+                    "PortunusAggThreat_ch.tproperty": "TDS",
+                    "PortunusAggThreat_ch.unknownAssetCount": "0"
+                },
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "0",
+                    "PortunusAggThreat_ch.requests": "1",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "protwq.com",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:15.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:15.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "1",
+                    "PortunusAggThreat_ch.tproperty": "TDS",
+                    "PortunusAggThreat_ch.unknownAssetCount": "1"
+                },
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "1",
+                    "PortunusAggThreat_ch.requests": "1",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "piteevoo.com",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:15.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:15.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "1",
+                    "PortunusAggThreat_ch.tproperty": "TDS",
+                    "PortunusAggThreat_ch.unknownAssetCount": "0"
+                },
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "0",
+                    "PortunusAggThreat_ch.requests": "1",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "psutoupoo.net",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:15.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:15.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "1",
+                    "PortunusAggThreat_ch.tproperty": "TDS",
+                    "PortunusAggThreat_ch.unknownAssetCount": "1"
+                },
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "1",
+                    "PortunusAggThreat_ch.requests": "1",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "osamamama.com",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:15.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:15.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "1",
+                    "PortunusAggThreat_ch.tproperty": "Generic",
+                    "PortunusAggThreat_ch.unknownAssetCount": "0"
+                },
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "0",
+                    "PortunusAggThreat_ch.requests": "1",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "newosama.com",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:14.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:14.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "1",
+                    "PortunusAggThreat_ch.tproperty": "Generic",
+                    "PortunusAggThreat_ch.unknownAssetCount": "1"
+                },
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "0",
+                    "PortunusAggThreat_ch.requests": "1",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "my.rtmark.net",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:14.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:14.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "1",
+                    "PortunusAggThreat_ch.tproperty": "TDS",
+                    "PortunusAggThreat_ch.unknownAssetCount": "1"
+                },
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "Omnatuor",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "1",
+                    "PortunusAggThreat_ch.requests": "1",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "madurird.com",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:14.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:14.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "1",
+                    "PortunusAggThreat_ch.tproperty": "TDS",
+                    "PortunusAggThreat_ch.unknownAssetCount": "0"
+                },
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "1",
+                    "PortunusAggThreat_ch.requests": "1",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "noudoofees.net",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:14.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:14.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "1",
+                    "PortunusAggThreat_ch.tproperty": "TDS",
+                    "PortunusAggThreat_ch.unknownAssetCount": "0"
+                },
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "Omnatuor",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "1",
+                    "PortunusAggThreat_ch.requests": "1",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "lemouwee.com",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:14.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:14.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "1",
+                    "PortunusAggThreat_ch.tproperty": "TDS",
+                    "PortunusAggThreat_ch.unknownAssetCount": "0"
+                },
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "1",
+                    "PortunusAggThreat_ch.requests": "1",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "mostourigoatik.com",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:14.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:14.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "1",
+                    "PortunusAggThreat_ch.tproperty": "TDS",
+                    "PortunusAggThreat_ch.unknownAssetCount": "0"
+                },
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "1",
+                    "PortunusAggThreat_ch.requests": "3",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "trk-keingent.com",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:14.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:12.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "3",
+                    "PortunusAggThreat_ch.tproperty": "TDS",
+                    "PortunusAggThreat_ch.unknownAssetCount": "2"
+                },
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "1",
+                    "PortunusAggThreat_ch.requests": "1",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "thecitydating.com",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:14.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:14.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "1",
+                    "PortunusAggThreat_ch.tproperty": "TDS",
+                    "PortunusAggThreat_ch.unknownAssetCount": "0"
+                },
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "0",
+                    "PortunusAggThreat_ch.requests": "1",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "memtebseeh.com",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:14.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:14.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "1",
+                    "PortunusAggThreat_ch.tproperty": "TDS",
+                    "PortunusAggThreat_ch.unknownAssetCount": "1"
+                },
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "Omnatuor",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "1",
+                    "PortunusAggThreat_ch.requests": "1",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "notix.io",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:14.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:14.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "1",
+                    "PortunusAggThreat_ch.tproperty": "TDS",
+                    "PortunusAggThreat_ch.unknownAssetCount": "0"
+                },
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "Omnatuor",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "1",
+                    "PortunusAggThreat_ch.requests": "1",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "notixio.com",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:14.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:14.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "1",
+                    "PortunusAggThreat_ch.tproperty": "TDS",
+                    "PortunusAggThreat_ch.unknownAssetCount": "0"
+                },
+                {
+                    "PortunusAggThreat_ch.action": "Block",
+                    "PortunusAggThreat_ch.actor_name": "",
+                    "PortunusAggThreat_ch.confidence": "High",
+                    "PortunusAggThreat_ch.feed_name": "Infoblox_Base",
+                    "PortunusAggThreat_ch.knownAssetCount": "0",
+                    "PortunusAggThreat_ch.requests": "1",
+                    "PortunusAggThreat_ch.severity": "High",
+                    "PortunusAggThreat_ch.tclass": "Malicious",
+                    "PortunusAggThreat_ch.threat_indicator": "zunlongkaishi25.com",
+                    "PortunusAggThreat_ch.timestampMax": "2025-05-08T02:30:13.000",
+                    "PortunusAggThreat_ch.timestampMin": "2025-05-08T02:30:13.000",
+                    "PortunusAggThreat_ch.totalAssetCount": "1",
+                    "PortunusAggThreat_ch.tproperty": "Generic",
+                    "PortunusAggThreat_ch.unknownAssetCount": "1"
+                }
+            ],
+            "dataSource": "SECURITY_CLICKHOUSE",
+            "dbType": "clickhouse",
+            "extDbType": "cubestore",
+            "external": false,
+            "lastRefreshTime": "2025-05-08T09:04:22.157Z",
+            "query": {
+                "dimensions": [
+                    "PortunusAggThreat_ch.tclass",
+                    "PortunusAggThreat_ch.tproperty",
+                    "PortunusAggThreat_ch.severity",
+                    "PortunusAggThreat_ch.confidence",
+                    "PortunusAggThreat_ch.feed_name",
+                    "PortunusAggThreat_ch.action",
+                    "PortunusAggThreat_ch.threat_indicator",
+                    "PortunusAggThreat_ch.actor_name"
+                ],
+                "filters": [
+                    {
+                        "member": "PortunusAggThreat_ch.severity",
+                        "operator": "notEquals",
+                        "values": [
+                            "Info"
+                        ]
+                    },
+                    {
+                        "member": "PortunusAggThreat_ch.tclass",
+                        "operator": "equals",
+                        "values": [
+                            "Malicious"
+                        ]
+                    },
+                    {
+                        "member": "PortunusAggThreat_ch.severity",
+                        "operator": "equals",
+                        "values": [
+                            "High"
+                        ]
+                    }
+                ],
+                "limit": 40,
+                "measures": [
+                    "PortunusAggThreat_ch.requests",
+                    "PortunusAggThreat_ch.totalAssetCount",
+                    "PortunusAggThreat_ch.knownAssetCount",
+                    "PortunusAggThreat_ch.unknownAssetCount",
+                    "PortunusAggThreat_ch.timestampMax",
+                    "PortunusAggThreat_ch.timestampMin"
+                ],
+                "offset": 0,
+                "order": [
+                    {
+                        "desc": true,
+                        "id": "PortunusAggThreat_ch.timestampMax"
+                    }
+                ],
+                "rowLimit": 40,
+                "segments": [
+                    "PortunusAggThreat_ch.threat_classes"
+                ],
+                "timeDimensions": [
+                    {
+                        "dateRange": [
+                            "2025-05-01T09:04:20.377",
+                            "2025-05-08T09:04:20.377"
+                        ],
+                        "dimension": "PortunusAggThreat_ch.timestamp"
+                    }
+                ],
+                "timezone": "UTC",
+                "total": true
+            },
+            "slowQuery": false,
+            "total": 552
+        }
+    }
+}
