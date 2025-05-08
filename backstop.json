@@ -10,7 +10,7 @@
   "onBeforeScript": "login.js",
   "scenarios": [
     {
-      "label": "Main Application Page",
+      "label": "Configure Landing Page",
       "cookiePath": "backstop_data/engine_scripts/cookies.json",
       "url": "https://env-2a.test.infoblox.com",
       "referenceUrl": "",
