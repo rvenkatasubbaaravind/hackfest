@@ -3,37 +3,11 @@ report({
   "tests": [
     {
       "pair": {
-        "reference": "../bitmaps_reference/388521236_Configure_Landing_Page_0_document_0_desktop.png",
-        "test": "../bitmaps_test/20250508-153345/388521236_Configure_Landing_Page_0_document_0_desktop.png",
+        "reference": "../bitmaps_reference/388521236_Security_Landing_Page_0_document_0_desktop.png",
+        "test": "../bitmaps_test/20250508-160938/388521236_Security_Landing_Page_0_document_0_desktop.png",
         "selector": "document",
-        "fileName": "388521236_Configure_Landing_Page_0_document_0_desktop.png",
-        "label": "Configure Landing Page",
-        "requireSameDimensions": true,
-        "misMatchThreshold": 0.1,
-        "url": "https://env-2a.test.infoblox.com",
-        "referenceUrl": "",
-        "expect": 0,
-        "viewportLabel": "desktop",
-        "diff": {
-          "isSameDimensions": true,
-          "dimensionDifference": {
-            "width": 0,
-            "height": 0
-          },
-          "rawMisMatchPercentage": 0.00390625,
-          "misMatchPercentage": "0.00",
-          "analysisTime": 33
-        }
-      },
-      "status": "pass"
-    },
-    {
-      "pair": {
-        "reference": "../bitmaps_reference/388521236_Security_Workspace_0_document_0_desktop.png",
-        "test": "../bitmaps_test/20250508-153345/388521236_Security_Workspace_0_document_0_desktop.png",
-        "selector": "document",
-        "fileName": "388521236_Security_Workspace_0_document_0_desktop.png",
-        "label": "Security Workspace",
+        "fileName": "388521236_Security_Landing_Page_0_document_0_desktop.png",
+        "label": "Security Landing Page",
         "requireSameDimensions": true,
         "misMatchThreshold": 0.1,
         "url": "https://env-2a.test.infoblox.com/#/workspace/security",

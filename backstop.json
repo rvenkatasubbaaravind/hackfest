@@ -10,7 +10,7 @@
   "onBeforeScript": "login.js",
   "scenarios": [
     {
-      "label": "Configure Landing Page",
+      "label": "Security Landing Page",
       "cookiePath": "backstop_data/engine_scripts/cookies.json",
       "url": "https://env-2a.test.infoblox.com/#/workspace/security",
       "referenceUrl": "",
