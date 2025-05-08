@@ -12,7 +12,7 @@
       {
       "label": "Security Theats Level Details Page",
       "cookiePath": "backstop_data/engine_scripts/cookies.json",
-      "url": "https://env-2a.test.infoblox.com/#/workspace/security",
+      "url": "https://stage.csp.infoblox.com/#/workspace/security",
       "referenceUrl": "",
       "readyEvent": "",
       "onReadyScript": "waitForAPIs.js",

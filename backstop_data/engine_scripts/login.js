@@ -1,23 +1,27 @@
-require('dotenv').config();
-const mockFunctions = require('./mock.js');
+require("dotenv").config();
+const mockFunctions = require("./mock.js");
 
 module.exports = async (page, scenario) => {
-  console.log('Logging in to the application...');
+  console.log("Logging in to the application...");
 
   await mockFunctions(page, scenario);
 
   // Navigate to the login page
-  await page.goto('https://env-2a.test.infoblox.com', { waitUntil: 'networkidle2' });
+  await page.goto("https://stage.csp.infoblox.com", {
+    waitUntil: "networkidle2",
+  });
 
   // Wait for the redirection to complete
-  await page.waitForNavigation({ waitUntil: 'networkidle0' });
+  await page.waitForNavigation({ waitUntil: "networkidle0" });
 
   // Fill in the username and submit
   const username = process.env.BACKSTOP_USERNAME;
   const password = process.env.BACKSTOP_PASSWORD;
 
   if (!username || !password) {
-    throw new Error('Environment variables BACKSTOP_USERNAME and BACKSTOP_PASSWORD must be set.');
+    throw new Error(
+      "Environment variables BACKSTOP_USERNAME and BACKSTOP_PASSWORD must be set."
+    );
   }
 
   await page.type('input[name="username"]', username);
@@ -28,9 +32,11 @@ module.exports = async (page, scenario) => {
   await page.type('input[type="password"]', password);
 
   // Ensure the submit button is visible and interactable before clicking
-  const submitButton = await page.waitForSelector('input[value="Sign In"]', { visible: true });
+  const submitButton = await page.waitForSelector('input[value="Sign In"]', {
+    visible: true,
+  });
   await submitButton.click(); // Click the submit button for password
-  await page.waitForNavigation({ waitUntil: 'networkidle0' }); // Wait for navigation to complete
+  await page.waitForNavigation({ waitUntil: "networkidle0" }); // Wait for navigation to complete
 
-  console.log('Login successful!');
+  console.log("Login successful!");
 };

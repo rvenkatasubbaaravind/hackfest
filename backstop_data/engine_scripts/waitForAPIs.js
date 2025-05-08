@@ -18,4 +18,11 @@ module.exports = async (page, scenario) => {
     }
   });
   console.log("Click action completed.");
+
+  // Wait for the redirection to complete
+  await page.waitForNavigation({ waitUntil: "networkidle0" });
+
+  console.log("Waiting for 5 seconds...");
+  await new Promise((resolve) => setTimeout(resolve, 5000));
+  console.log("3 seconds wait completed.");
 };
