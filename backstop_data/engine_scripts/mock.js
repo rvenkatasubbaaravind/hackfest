@@ -80,7 +80,7 @@ module.exports = async (page, scenario) => {
             "PortunusAggThreat_ch.actor_name",
           ])
         ) {
-          responseData = mockData["case7"] || {};
+          responseData = mockData["case6"] || {};
         }
 
         request.respond({
