@@ -39,4 +39,21 @@ module.exports = async (page, scenario) => {
   await page.waitForNavigation({ waitUntil: "networkidle0" }); // Wait for navigation to complete
 
   console.log("Login successful!");
+
+  console.log("Running ufeOverride after login...");
+  await page.evaluate(() => {
+    if (typeof ufeOverride === "function") {
+      ufeOverride("dashboards", "v4.6.1-0-g7a334cb-dashboards--main");
+      console.log("ufeOverride executed successfully.");
+    } else {
+      console.warn("ufeOverride function is not defined on the page.");
+    }
+  });
+  console.log(
+    "ufeOverride execution completed. Waiting for navigation to start..."
+  );
+
+  // Wait for navigation to start and complete
+  await page.waitForNavigation({ waitUntil: "networkidle0" });
+  console.log("Navigation completed.");
 };
