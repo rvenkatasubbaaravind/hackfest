@@ -9,6 +9,25 @@
   ],
   "onBeforeScript": "login.js",
   "scenarios": [
+    {
+      "label": "Security Monitors Page",
+      "cookiePath": "backstop_data/engine_scripts/cookies.json",
+      "url": "https://stage.csp.infoblox.com/#/workspace/security",
+      "referenceUrl": "",
+      "readyEvent": "",
+      "onReadyScript": "waitForMonitors.js",
+      "readySelector": "ib-dashboard-widget",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": "",
+      "postInteractionWait": 0,
+      "selectors": ["document"],
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold": 0.05,
+      "requireSameDimensions": true
+    },
       {
       "label": "Security Theats Level Details Page",
       "cookiePath": "backstop_data/engine_scripts/cookies.json",
@@ -40,7 +59,7 @@
   "engine": "puppeteer",
   "engineOptions": {
     "args": ["--no-sandbox"],
-    "headless": false
+    "headless": true
   },
   "asyncCaptureLimit": 5,
   "asyncCompareLimit": 50,
