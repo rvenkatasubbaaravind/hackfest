@@ -25,7 +25,7 @@
       "selectors": ["document"],
       "selectorExpansion": true,
       "expect": 0,
-      "misMatchThreshold": 0.1,
+      "misMatchThreshold": 0.05,
       "requireSameDimensions": true
     }
   ],
