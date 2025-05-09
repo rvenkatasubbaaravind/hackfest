@@ -23,10 +23,15 @@ module.exports = async (page, scenario) => {
   });
   console.log("Click action completed.");
 
-  // Wait for the redirection to complete
-  await page.waitForNavigation({ waitUntil: "networkidle0" });
+  // Replace your final navigation wait with this more comprehensive approach
+await Promise.all([
+  page.waitForNavigation({ waitUntil: 'networkidle0' }),
+  page.waitForNavigation({ waitUntil: 'load' }),
+  page.waitForNavigation({ waitUntil: 'domcontentloaded' })
+]).catch(e => console.log('Some navigation event might have been missed, but continuing...'));
 
-  console.log("Waiting for 5 seconds...");
+console.log("Waiting for 5 seconds...");
   await new Promise((resolve) => setTimeout(resolve, 5000));
   console.log("5 seconds wait completed.");
+  
 };

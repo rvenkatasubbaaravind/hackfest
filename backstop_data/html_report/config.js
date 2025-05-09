@@ -4,7 +4,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/0776184786_Security_Theats_Level_Details_Page_0_document_0_desktop.png",
-        "test": "../bitmaps_test/20250509-134738/0776184786_Security_Theats_Level_Details_Page_0_document_0_desktop.png",
+        "test": "../bitmaps_test/20250509-140321/0776184786_Security_Theats_Level_Details_Page_0_document_0_desktop.png",
         "selector": "document",
         "fileName": "0776184786_Security_Theats_Level_Details_Page_0_document_0_desktop.png",
         "label": "Security Theats Level Details Page",
@@ -20,13 +20,10 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 0.08130787037037036,
-          "misMatchPercentage": "0.08",
-          "analysisTime": 21
-        },
-        "diffImage": "../bitmaps_test/20250509-134738/failed_diff_0776184786_Security_Theats_Level_Details_Page_0_document_0_desktop.png"
+          "misMatchPercentage": "0.00"
+        }
       },
-      "status": "fail"
+      "status": "pass"
     }
   ],
   "id": ""
