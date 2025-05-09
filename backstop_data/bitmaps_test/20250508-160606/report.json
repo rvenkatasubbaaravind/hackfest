@@ -1,0 +1,30 @@
+{
+  "testSuite": "BackstopJS",
+  "tests": [
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/0776184786_Configure_Landing_Page_0_document_0_desktop.png",
+        "test": "../bitmaps_test/20250508-160606/0776184786_Configure_Landing_Page_0_document_0_desktop.png",
+        "selector": "document",
+        "fileName": "0776184786_Configure_Landing_Page_0_document_0_desktop.png",
+        "label": "Configure Landing Page",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "https://env-2a.test.infoblox.com/#/workspace/security",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    }
+  ],
+  "id": ""
+}
